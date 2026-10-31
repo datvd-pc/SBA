@@ -31,6 +31,13 @@ Chỉ chạy script từ repo mà người dùng tin tưởng. Có thể clone r
 
 Workspace mặc định: Windows `%USERPROFILE%\.openclaw\workspace`; macOS/Linux `~/.openclaw/workspace`.
 
+## Đăng nhập model không cần API key
+
+- **OpenAI Codex / ChatGPT:** đăng nhập bằng OAuth trong OpenClaw; model dùng hạn mức Codex của tài khoản đủ điều kiện.
+- **Claude Code:** cài Claude Code và đăng nhập trên cùng máy, cùng tài khoản hệ điều hành chạy OpenClaw Gateway; chọn Claude CLI khi cấu hình. Claude Code tự quản lý phiên đăng nhập. Lượt dùng chia sẻ hạn mức của gói Claude.
+- **Gemini bằng tài khoản Google:** Gemini CLI có đăng nhập Google riêng, nhưng OpenClaw hiện chưa hỗ trợ thiết lập OAuth Gemini CLI mới. Muốn gọi Gemini trực tiếp trong OpenClaw cần API key từ AI Studio hoặc cấu hình Vertex AI.
+
+OpenClaw không cần và không nên nhận mật khẩu tài khoản. Hãy đăng nhập qua trang OAuth hoặc CLI chính thức. Đăng nhập model AI tách biệt với cấp quyền Google Drive/Calendar; hai dịch vụ này vẫn cần kết nối riêng.
 ## Phạm vi bản khởi động
 
 Repo này tự cài OpenClaw Gateway và hướng dẫn trợ lý. Model chạy qua provider người dùng chọn; repo không tải model cục bộ. Google Drive, Google Calendar, CRM và Zalo OA cần kết nối riêng sau khi cài. Zalo Bot và Zalo OA là hai tích hợp khác nhau.
