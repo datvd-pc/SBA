@@ -1,0 +1,12 @@
+﻿# Local business data and credentials
+COMPANY_PROFILE.md
+.env
+.env.*
+!.env.example
+*.token
+*credentials*.json
+
+# Local state/backups
+.openclaw/
+workspace-local/
+*.log
